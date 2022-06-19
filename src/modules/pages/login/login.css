@@ -1,0 +1,94 @@
+.conteiner-login {
+    width: 100vw;
+    height: 100vh;
+    /* background: #6c7a89; */
+    background-color: #121214;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    
+.login-form {
+    width: 300px;
+    height: 380px;
+    background-color:#212529;
+}
+
+.logo-login{
+    display: flex;
+    font-size: 1.3rem;
+    color:#FF577F;
+    justify-content: center;
+    margin-top: -55px;
+    margin-bottom: 50px;
+}
+
+.nomeForm-login{
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.alinharCentro{
+    display: flex;
+    justify-content: center
+}
+
+.alinharCentro{
+    display: flex;
+    justify-content: center
+}
+
+.imput-email-senha{
+    color: black;
+    width: 250px;
+    height: 30px;
+}
+
+.MostrarSenha{
+    margin-left: -20px;
+    cursor: pointer;
+    color: #121214;
+    font-size: 20px;
+}
+
+.imput-email-login{
+    color: black;
+    width: 250px;
+    height: 30px;
+}
+
+.alinhar-email-senha{
+    display: flex;
+    color: #868E96;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-login{
+    width: 250px;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color:#FF577F;
+    cursor: pointer;
+}
+
+.span-semConta{
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    color: #868E96;
+    font-size: 12px;
+}
+
+.btnIrpaginaCadastro{
+    width: 250px;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color:#868E96;
+}

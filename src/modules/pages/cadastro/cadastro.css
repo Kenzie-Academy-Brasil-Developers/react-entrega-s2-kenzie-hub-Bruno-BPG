@@ -1,0 +1,82 @@
+.conteiner-cadastro {
+    /* background: #6c7a89; */
+    background-color: #121214;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+.subTitulo{
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    color: #868E96;
+    font-size: 12px;
+}
+
+.cadastro-form {
+    width: 300px;
+    height: 700px;
+    margin-bottom: 20px;
+    background-color:#212529;
+}
+
+.div-logo-cadastro{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-cadastro{
+    font-size: 1.3rem;
+    color:#FF577F;
+    margin-top: -45px;
+    margin-bottom: 40px;
+}
+
+.btnVoltar-cadastro{
+    background-color: #212529;
+    margin-top: -45px;
+    margin-bottom: 40px;
+    height: 28px;
+    width: 55px;
+}
+
+.nomeForm-cadastro{
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: center;
+}
+
+.alinharCentro{
+    display: flex;
+    justify-content: center
+}
+
+.alinarImput{
+    background-color: #343B41;
+    color:#868E96;
+    padding-left: 7px;
+    width: 250px;
+    height: 35px;
+}
+
+.ajustarCorGrey{
+    color: #868E96;
+}
+
+.alinharNome{
+    display: flex;
+    color:#F8F9FA;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-cadastro{
+    width: 250px;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color:#FF577F;
+    cursor: pointer;
+}

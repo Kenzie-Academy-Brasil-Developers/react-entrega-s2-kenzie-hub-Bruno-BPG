@@ -1,0 +1,97 @@
+*{
+    color: white;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+header{
+    margin-top: 10px;
+    display: flex;
+    width: 870px;
+    justify-content: space-between;
+}
+
+.headerExterno{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    color: #FF577F;
+    font-size: 1.2rem;
+}
+
+body{
+    background-color: #121214;
+}
+
+.caixaDoNome{
+    display: flex;
+    justify-content: space-between;
+    width: 870px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.caixaDoNomeExterna{
+    display: flex;
+    border-top: 1px solid #212529;
+    border-bottom: 1px solid #212529;
+    justify-content: center;
+}
+
+.superiorConteinerExterno{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.superiorConteiner{
+    display: flex;
+    width: 870px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.BtnSaida{
+    background-color: #212529;
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.BtnNovaTecnologia{
+    background-color: #212529;
+    width: 32px;
+    height:25px;
+    cursor: pointer;
+}
+
+.MainExterno{
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    background-color: #212529;
+    width: 870px;
+    height: 400px;
+    /* margin-left: 250px; */
+    /* margin-bottom: 10px; */
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 35px;
+    background-color: #121214;
+    margin: 15px;
+}
+
+/* .conteinerInternal{
+    background-color: aqua;
+} */
