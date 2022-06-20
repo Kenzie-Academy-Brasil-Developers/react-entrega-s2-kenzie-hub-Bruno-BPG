@@ -1,24 +1,28 @@
 import "./home.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, } from "react";
+import { useParams } from "react-router-dom";
 
 import GerarCards from "./cads";
 
 function GerarHome(){
     const [techs, setTechs] = useState([]);
     const [dadosUser, setDadosUser] = useState([]);
+
+    const params = useParams()
   
     useEffect(() => {
       fetch(
-        "https://kenziehub.herokuapp.com/users/eac4db53-9ebd-4849-bb6e-274968158563"
+        `https://kenziehub.herokuapp.com/users/${params.id}`
       )
         .then((response) => response.json())
         .then((response) => {
           setTechs(response.techs);
           setDadosUser(response);
-          console.log(response);
+          // console.log(response);
         })
         .catch((err) => console.log(err));
-    }, []);
+    }, [params]);
+
 
     return (
         <div>
