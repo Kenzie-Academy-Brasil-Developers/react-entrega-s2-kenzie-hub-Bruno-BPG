@@ -12,6 +12,8 @@ import { useState } from "react";
 
 import { toast } from "react-toastify";
 
+// hhjhjh@kenzie.com.br
+
 function GerarPageLogin() {
   const [inputEmail, setInputEmail] = useState("");
   const [inputSenha, setInputSenha] = useState("");
@@ -30,7 +32,8 @@ function GerarPageLogin() {
 
     Api.post("/sessions", dadoUser)
     .then((response) => {
-      localStorage.setItem("hubToken", JSON.stringify(response.data.token))
+      localStorage.setItem("hubToken",response.data.token)
+      // localStorage.setItem("hubToken", JSON.stringify(response.data.token))
       toast.success("login feito com sucesso");
       return history.push(`/home${response.data.user.id}`)
     })

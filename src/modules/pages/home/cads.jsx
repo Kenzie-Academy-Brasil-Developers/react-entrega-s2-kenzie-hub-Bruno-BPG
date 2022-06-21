@@ -1,6 +1,10 @@
 // import PegarDadosUser from './dadosUser';
 // import { useEffect, useState } from "react";
 
+import Api from "../api";
+import { toast } from "react-toastify";
+
+
 function GerarCards ({dadosUsuario}) {
 
 // const dado = [{
@@ -28,6 +32,7 @@ function GerarCards ({dadosUsuario}) {
 // const dados = dadosUsuario.techs
 // console.log(dados)
 // console.log(dadosUsuario)
+const tokenHub = localStorage.getItem("hubToken")
 
 
 return dadosUsuario.map((produto, index) => (
@@ -37,6 +42,20 @@ return dadosUsuario.map((produto, index) => (
         </span>
         <span>
         {produto.status}
+        <span onClick={()=>{console.log(produto.id)
+        Api.delete(`/users/techs/${produto.id}`,{
+            headers: {Authorization: `Bearer ${tokenHub}`}
+           
+          })
+          .then((response) => {
+            toast.success("sucesso");
+          })
+          .catch((err) => toast.error("não"))
+        
+        
+        }} className="btnDeletar">
+            &#128465;
+            </span>
         </span>
     </div>
 ))

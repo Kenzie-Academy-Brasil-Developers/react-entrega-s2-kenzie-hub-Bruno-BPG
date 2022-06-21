@@ -4,6 +4,12 @@ import { useParams } from "react-router-dom";
 
 import { useHistory } from "react-router-dom";
 
+import Api from "../api";
+
+import { toast } from "react-toastify";
+
+
+
 
 import GerarCards from "./cads";
 
@@ -48,6 +54,36 @@ function GerarHome(){
     }, [params]);
 
 
+    const dadoAddNewTecnologia = {
+      "title": "hghf",
+      "status": "Iniciante"
+    }
+
+function addTecnologia (event){
+  event.preventDefault()
+
+  const tokenHub = localStorage.getItem("hubToken")
+
+
+
+  // console.log(tokenHub)
+  // console.log(Api())
+  Api.post("/users/techs", dadoAddNewTecnologia, {
+    headers: {"Content-Type": "application/json",
+    Authorization: `Bearer ${tokenHub}`}
+   
+  })
+  .then((response) => {
+    toast.success("sucesso");
+  })
+  .catch((err) => toast.error("não foi criada"))
+}
+
+
+
+
+
+
     return (
         <div>
              <div className="headerExterno">
@@ -69,7 +105,11 @@ function GerarHome(){
       <div className="superiorConteinerExterno">
         <div className="superiorConteiner">
           <span className="tecnologia">tecnologia</span>
-          <button className="BtnNovaTecnologia">+</button>
+          <button onClick={(event) => {
+
+                addTecnologia(event)
+
+            }} className="BtnNovaTecnologia">+</button>
         </div>
       </div>
       <div className="MainExterno">

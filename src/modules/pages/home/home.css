@@ -103,3 +103,10 @@ main{
 /* .conteinerInternal{
     background-color: aqua;
 } */
+
+.btnDeletar{
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
