@@ -34,6 +34,7 @@
 }
 
 .btnVoltar-cadastro{
+    color: white;
     background-color: #212529;
     cursor: pointer;
     margin-top: -45px;
@@ -43,6 +44,7 @@
 }
 
 .nomeForm-cadastro{
+    color: white;
     display: flex;
     font-size: 1.1rem;
     justify-content: center;

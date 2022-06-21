@@ -1,42 +1,46 @@
 import {Switch, Route} from "react-router-dom";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 import GerarHome from "./modules/pages/home/home";
 import GerarPageLogin from "./modules/pages/login/login";
 import GerarPageCadastro from "./modules/pages/cadastro/cadastro";
 
-import { useState, useEffect} from "react";
+// import { useState, useEffect} from "react";
 
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 
 function App() {
 
-  const [dado, setDado] = useState(false)
+  // const [checkLogado, setCheckLogado] = useState(false)
   
-  const history = useHistory()
+  // const history = useHistory()
 
 
-  useEffect(()=>{
-    const token = localStorage.getItem('hubToken')
-    if(token){
-      setDado(true)
-    }
-    else{
-      console.log(dado)
+  // useEffect(()=>{
+  //   const token = localStorage.getItem('hubToken')
+  //   if(token){
+  //     setCheckLogado(true)
+  //   }
+  //   else{
+  //     console.log(checkLogado)
       
-      // history.push(`/login`)
+  //     history.push(`/login`)
 
-    }
-  },[dado,history]
+  //   }
+  // },[checkLogado,history]
 
-  )
+  // )
 
   return (
+    
     <div className="App">
       <Switch>
 
         <Route exact path="/">
-          fdsoifdsui
+        {/* {history.push("/login")} */}
+          {/* fdsoifdsui */}
         </Route>
 
         <Route exact path="/home:id">
