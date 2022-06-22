@@ -1,0 +1,47 @@
+@media screen and (max-width:1000px){
+    .card{
+        margin-left: 10px;
+        margin-right: 10px;
+    
+    }
+
+    span{
+        margin-left: 20px;
+    }
+
+    .modal{
+        position: absolute;
+        top: 25%;
+        left: 30%;
+    }
+
+
+}
+
+@media screen and (max-width:600px){
+
+    .modal{
+        width: 260px;
+        margin-left: 20px;
+        height: 250px;
+        top: 25%;
+        left: 5%;
+    }
+
+    .inputNameModal{
+        width: 220px;
+    }
+
+    .BtnCadastrarModal{
+        width: 220px;
+    }
+
+    .BtnSalvarAlterações{
+        width: 100px;
+    }
+
+    .divBtnsDelete-editar{
+        width: 90%;
+    }
+        
+}

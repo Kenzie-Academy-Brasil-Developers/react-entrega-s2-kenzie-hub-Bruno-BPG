@@ -12,6 +12,10 @@ header{
     justify-content: space-between;
 }
 
+.card:hover{
+    background-color: #343B41;
+}
+
 .headerExterno{
     display: flex;
     justify-content: center;
@@ -83,9 +87,9 @@ body{
 }
 
 main{
-    background-color: #212529;
     width: 870px;
-    height: 400px;
+    /* height: 400px; */
+    /* background-color: #212529; */
     /* margin-left: 250px; */
     /* margin-bottom: 10px; */
 }
@@ -94,19 +98,103 @@ main{
     color: white;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px;
-    height: 35px;
+    height: 45px;
     background-color: #121214;
-    margin: 15px;
+    border: solid #212529 15px;
+    cursor: pointer;
 }
 
-/* .conteinerInternal{
-    background-color: aqua;
-} */
+.modal{
+    width: 370px;
+    height: 260px;
+    background-color: #212529;
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    right: auto;
+
+}
+
+.btnModal{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    background-color: #343B41;
+    color: #868E96;
+    font-size: 16px;
+    margin-right: 6px;
+}
+
+.tituloModal{
+    margin-left: 10px;
+}
+
+.parteSuperiorModal{
+    height: 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343B41;
+    border-bottom: solid #212529 15px;
+}
+
+.corpoModal{
+    height: 100%;
+    width: 100%;
+    background-color: #212529;
+    color: #F8F9FA;
+}
+
+.inputNameModal{
+    margin-left: 20px;
+    margin-top: 10px;
+    height: 50px;
+    background-color: #343B41;
+    width: 330px;
+    color: white;
+}
+
+.indentificadorModal{
+    margin-left: 20px;
+
+}
+
+.module{
+    color: #868E96;
+}
+
+.BtnCadastrarModal{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 50px;
+    width: 330px;
+    background-color: #FF577F;
+    color: white;
+    cursor: pointer;
+}
+
+.BtnSalvarAlterações{
+    width: 201px;
+    background-color: #59323F;
+    color: white;
+    height: 50px;
+    cursor: pointer;
+}
+
+.divBtnsDelete-editar{
+    margin-top: 13px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
 
 .btnDeletar{
-    margin-right: 10px;
-    margin-left: 10px;
-    font-size: 18px;
     cursor: pointer;
+    color: white;
+    width: 100px;
+    height: 50px;
+    background-color: #868E96;
 }

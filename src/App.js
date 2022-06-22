@@ -1,37 +1,20 @@
 import {Switch, Route} from "react-router-dom";
 import 'react-toastify/dist/ReactToastify.css';
 
+// import "./modules/mobilefist.css"
 
 import GerarHome from "./modules/pages/home/home";
 import GerarPageLogin from "./modules/pages/login/login";
 import GerarPageCadastro from "./modules/pages/cadastro/cadastro";
 
-// import { useState, useEffect} from "react";
+import { useState } from "react";
 
 // import { useHistory } from "react-router-dom";
 
 
 function App() {
 
-  // const [checkLogado, setCheckLogado] = useState(false)
-  
-  // const history = useHistory()
 
-
-  // useEffect(()=>{
-  //   const token = localStorage.getItem('hubToken')
-  //   if(token){
-  //     setCheckLogado(true)
-  //   }
-  //   else{
-  //     console.log(checkLogado)
-      
-  //     history.push(`/login`)
-
-  //   }
-  // },[checkLogado,history]
-
-  // )
 
   return (
     
@@ -41,9 +24,10 @@ function App() {
         <Route exact path="/">
         {/* {history.push("/login")} */}
           {/* fdsoifdsui */}
+        {/* <span>fdfdsfds</span> */}
         </Route>
 
-        <Route exact path="/home:id">
+        <Route exact path="/home/:id">
           <GerarHome></GerarHome>
         </Route>
 

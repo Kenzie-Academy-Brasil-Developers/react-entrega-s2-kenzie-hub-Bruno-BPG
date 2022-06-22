@@ -4,43 +4,32 @@ import { useParams } from "react-router-dom";
 
 import { useHistory } from "react-router-dom";
 
-import Api from "../api";
+import "./mobileFistHome.css"
 
-import { toast } from "react-toastify";
+// import Api from "../api";
 
+// import { toast } from "react-toastify";
+
+import Modal from "./modalAddTech";
+import CheckLogin from "./checkToken";
 
 
 
 import GerarCards from "./cads";
 
 function GerarHome(){
+
+  const [modal, setModal] = useState(false)
+
     const [techs, setTechs] = useState([]);
     const [dadosUser, setDadosUser] = useState([]);
 
     const params = useParams()
-    
     const history = useHistory();
   
-    const [checkLogado, setCheckLogado] = useState(false)
+    CheckLogin()
 
-  
-    useEffect(()=>{
-      const token = localStorage.getItem('hubToken')
-      if(token){
-        setCheckLogado(true)
-      }
-      else{
-        console.log(checkLogado)
-        
-        history.push(`/login`)
-  
-      }
-    },[checkLogado,history]
-  
-    )
-    
-
-    useEffect(() => {
+    function gerrarTech(){
       fetch(
         `https://kenziehub.herokuapp.com/users/${params.id}`
       )
@@ -51,41 +40,18 @@ function GerarHome(){
           // console.log(response);
         })
         .catch((err) => console.log(err));
-    }, [params]);
-
-
-    const dadoAddNewTecnologia = {
-      "title": "hghf",
-      "status": "Iniciante"
     }
+    
 
-function addTecnologia (event){
-  event.preventDefault()
-
-  const tokenHub = localStorage.getItem("hubToken")
-
-
-
-  // console.log(tokenHub)
-  // console.log(Api())
-  Api.post("/users/techs", dadoAddNewTecnologia, {
-    headers: {"Content-Type": "application/json",
-    Authorization: `Bearer ${tokenHub}`}
-   
-  })
-  .then((response) => {
-    toast.success("sucesso");
-  })
-  .catch((err) => toast.error("não foi criada"))
-}
-
-
-
-
+    useEffect(() => {
+      gerrarTech()
+    }, [params]);
 
 
     return (
         <div>
+
+          {modal && <Modal gerrarTech={gerrarTech} setModal = {setModal}></Modal> }
              <div className="headerExterno">
         <header>
           <span className="logo">Kenzie Hub</span>
@@ -98,7 +64,7 @@ function addTecnologia (event){
       <div className="caixaDoNomeExterna">
         <div className="caixaDoNome">
           <span>Olá, {dadosUser.name}</span>
-          <span>{dadosUser.course_module}</span>
+          <span className="module">{dadosUser.course_module}</span>
         </div>
       </div>
 
@@ -106,15 +72,15 @@ function addTecnologia (event){
         <div className="superiorConteiner">
           <span className="tecnologia">tecnologia</span>
           <button onClick={(event) => {
+            setModal(true)
 
-                addTecnologia(event)
 
             }} className="BtnNovaTecnologia">+</button>
         </div>
       </div>
       <div className="MainExterno">
         <main>
-          <GerarCards dadosUsuario={techs}></GerarCards>
+          <GerarCards gerrarTech={gerrarTech} dadosUsuario={techs}></GerarCards>
         </main>
       </div>
         </div>

@@ -35,7 +35,7 @@ function GerarPageLogin() {
       localStorage.setItem("hubToken",response.data.token)
       // localStorage.setItem("hubToken", JSON.stringify(response.data.token))
       toast.success("login feito com sucesso");
-      return history.push(`/home${response.data.user.id}`)
+      return history.push(`/home/${response.data.user.id}`)
     })
     .catch((err) => toast.error("Erro no email ou na senha tente novamente"))
   }
@@ -85,7 +85,6 @@ function GerarPageLogin() {
             type={"password"}
           ></input>
           <span>{errors.senha?.message}</span>
-          <span className="MostrarSenha">&#9673;</span>
         </div>
         <div className="alinharCentro">
           <button
