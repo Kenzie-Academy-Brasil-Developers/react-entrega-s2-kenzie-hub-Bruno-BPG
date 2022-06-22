@@ -6,16 +6,10 @@ import { useHistory } from "react-router-dom";
 
 import "./mobileFistHome.css"
 
-// import Api from "../api";
+import Modal from "../../components/modalAddTech";
+import CheckLogin from "../../components/checkToken";
 
-// import { toast } from "react-toastify";
-
-import Modal from "./modalAddTech";
-import CheckLogin from "./checkToken";
-
-
-
-import GerarCards from "./cads";
+import GerarCards from "../../components/cads";
 
 function GerarHome(){
 

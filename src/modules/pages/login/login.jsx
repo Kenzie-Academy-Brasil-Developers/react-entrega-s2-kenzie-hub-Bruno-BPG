@@ -1,5 +1,5 @@
 import "./login.css";
-import Api from "../api";
+import Api from "../../components/api.js";
 import React from "react";
 
 import { useHistory } from "react-router-dom";

@@ -1,14 +1,21 @@
-import Api from "../api";
+import Api from "./api";
+
 import { toast } from "react-toastify";
 
-function BtnDeletar({ produto , gerrarTech}) {
+function BtnEditar({ produto, gerrarTech, status}) {
   const tokenHub = localStorage.getItem("hubToken");
-  // console.log(produto);
+
+  const dado = {
+	"status": status
+}
+
+  console.log(produto);
+
   return (
     <span
       onClick={() => {
         console.log(produto);
-        Api.delete(`/users/techs/${produto}`, {
+        Api.put(`/users/techs/${produto}`,dado, {
           headers: { Authorization: `Bearer ${tokenHub}` },
         })
           .then((response) => {
@@ -16,12 +23,13 @@ function BtnDeletar({ produto , gerrarTech}) {
             gerrarTech()
           })
           .catch((err) => toast.error("não"));
+
       }}
       
     >
-     <button className="btnDeletar">Excluir</button>
+     <button className="BtnSalvarAlterações">Salvar alterações</button>
     </span>
   );
 }
 
-export default BtnDeletar;
+export default BtnEditar;

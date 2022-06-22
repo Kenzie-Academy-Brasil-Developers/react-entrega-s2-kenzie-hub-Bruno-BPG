@@ -1,6 +1,6 @@
 import "./cadastro.css";
 
-import Api from "../api";
+import Api from "../../components/api.js";
 
 import { useHistory } from "react-router-dom";
 

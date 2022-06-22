@@ -1,4 +1,4 @@
-import Api from "../api";
+import Api from "./api";
 import { toast } from "react-toastify";
 
 // import CheckLogin from "./checkToken";
